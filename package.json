@@ -1,0 +1,83 @@
+{
+  "name": "@jumpn/promise",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Promise utilities (immutability, fp helpers)",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/umd/index.js",
+  "scripts": {
+    "clean": "rm -rfv dist",
+    "build:readme": "pkg-to-readme --template ./README.ejs --force && documentation readme src/** --section API",
+    "build:flow": "flow-copy-source -v src dist/cjs",
+    "build:src": "rollup -c",
+    "build": "yarn run clean && yarn run build:src && yarn run build:flow && yarn build:readme",
+    "lint": "eslint --rule 'flowtype-errors/show-errors: error'",
+    "lint:fix": "yarn run lint -- --fix",
+    "precommit": "lint-staged",
+    "commit": "git-cz",
+    "commitmsg": "commitlint -e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumpn/promise.git"
+  },
+  "author": "Mauro Titimoli <mauro@jumpn.com> (https://github.com/mgtitimoli)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jumpn/promise/issues"
+  },
+  "homepage": "https://github.com/jumpn/promise#readme",
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "babel-runtime": "6.26.0",
+    "flow-static-land": "0.2.7",
+    "lodash": "4.17.4",
+    "lodash.isobject": "3.0.2",
+    "lodash.isplainobject": "4.0.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "3.2.0",
+    "@commitlint/config-angular": "3.1.1",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-stage-0": "6.24.1",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "documentation": "5.3.2",
+    "eslint": "4.7.1",
+    "eslint-config-airbnb-base": "12.0.0",
+    "eslint-config-prettier": "2.5.0",
+    "eslint-plugin-flowtype": "2.35.1",
+    "eslint-plugin-flowtype-errors": "3.3.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-prettier": "2.3.1",
+    "flow-bin": "0.54.1",
+    "flow-copy-source": "1.2.1",
+    "flow-typed": "2.1.5",
+    "husky": "0.14.3",
+    "lint-staged": "4.2.1",
+    "np": "2.16.0",
+    "pkg-to-readme": "1.1.0",
+    "prettier": "1.7.0",
+    "rollup": "0.50.0",
+    "rollup-plugin-babel": "3.0.2",
+    "rollup-plugin-commonjs": "8.2.1",
+    "rollup-plugin-node-resolve": "3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint:fix",
+      "git add"
+    ]
+  }
+}

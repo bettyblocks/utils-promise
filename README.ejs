@@ -1,0 +1,24 @@
+# <%= name %>
+
+> <%= description %>
+
+## Types
+
+```flowtype
+type Deferred<Result> = {
+  promise: Promise<Result>,
+  resolve: (result: Result) => void,
+  reject: (error: any) => void
+};
+
+type PromiseInfo<Result> = {
+  result: Result,
+  status: void | "rejected" | "resolved"
+};
+```
+
+## API
+
+## License
+
+[<%= license %>](LICENSE.txt) :copyright: **Jumpn Limited** / <%= author.name %> (<%= author.email %>)
