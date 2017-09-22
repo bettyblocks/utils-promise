@@ -10,7 +10,7 @@
     "flow-copy-source": "flow-copy-source -v src",
     "build:flow": "yarn flow-copy-source dist && yarn flow-copy-source compat/cjs",
     "build:index": "create-index --banner '// @flow' src/ && sed -f indexIgnore.sed -i src/index.js && yarn lint:fix src/index.js",
-    "build:readme": "pkg-to-readme --template ./README.ejs --force && documentation readme src/** --section API",
+    "build:readme": "pkg-to-readme --template ./readmeTemplate.ejs --force && documentation readme src/** --section API",
     "build:src": "rollup -c",
     "build": "yarn run clean && yarn build:index && yarn run build:src && yarn run build:flow && yarn build:readme",
     "lint": "eslint --rule 'flowtype-errors/show-errors: error'",
