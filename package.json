@@ -1,5 +1,5 @@
 {
-  "name": "@jumpn/promise",
+  "name": "@jumpn/utils-promise",
   "private": true,
   "version": "0.1.0",
   "description": "Promise utilities (immutability, fp helpers)",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jumpn/promise.git"
+    "url": "git+https://github.com/jumpn/utils-promise.git"
   },
   "author": "Mauro Titimoli <mauro@jumpn.com> (https://github.com/mgtitimoli)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jumpn/promise/issues"
+    "url": "https://github.com/jumpn/utils-promise/issues"
   },
-  "homepage": "https://github.com/jumpn/promise#readme",
+  "homepage": "https://github.com/jumpn/utils-promise#readme",
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "babel-runtime": "6.26.0",
