@@ -1,6 +1,6 @@
-# @jumpn/promise
+# @jumpn/utils-promise
 
-> Promise utilities (immutability, fp helpers)
+> Promise utilities
 
 ## Types
 
@@ -42,6 +42,8 @@ next methods
 
 -   `chainers` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)>** 
 -   `initialPromise` **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
 
 ### createDeferred
 

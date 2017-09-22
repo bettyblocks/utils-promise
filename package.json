@@ -2,7 +2,7 @@
   "name": "@jumpn/utils-promise",
   "private": true,
   "version": "0.1.0",
-  "description": "Promise utilities (immutability, fp helpers)",
+  "description": "Promise utilities",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "browser": "dist/umd/index.js",
