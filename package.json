@@ -16,9 +16,12 @@
     "build": "yarn run clean && yarn build:index && yarn run build:src && yarn run build:flow && yarn build:readme",
     "lint": "eslint --rule 'flowtype-errors/show-errors: error'",
     "lint:fix": "yarn run lint -- --fix",
+    "npm:publish": "np",
     "precommit": "lint-staged",
     "commit": "git-cz",
-    "commitmsg": "commitlint -e"
+    "commitmsg": "commitlint -e",
+    "version": "yarn build:index && yarn build:readme && git add README.md src/index.js",
+    "prepublishOnly": "yarn build:src && yarn build:flow"
   },
   "repository": {
     "type": "git",
