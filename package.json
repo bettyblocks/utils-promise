@@ -1,6 +1,6 @@
 {
   "name": "@jumpn/utils-promise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Promise utilities",
   "module": "dist/index.js",
   "main": "compat/cjs/index.js",
