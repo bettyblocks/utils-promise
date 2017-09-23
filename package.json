@@ -47,9 +47,7 @@
     "babel-polyfill": "6.26.0",
     "babel-runtime": "6.26.0",
     "flow-static-land": "0.2.7",
-    "lodash": "4.17.4",
-    "lodash.isobject": "3.0.2",
-    "lodash.isplainobject": "4.0.6"
+    "lodash": "4.17.4"
   },
   "devDependencies": {
     "@commitlint/cli": "3.2.0",
