@@ -8,7 +8,7 @@ import promisifyFunction from "./promisifyFunction";
  * Returns a new object with the result of having promisified all the methods of
  * the one given.
  */
-const promisifyObject = (object: Object) =>
+const promisifyObject = (object: Object): Object =>
   mapValues(
     value =>
       typeof value === "function"
