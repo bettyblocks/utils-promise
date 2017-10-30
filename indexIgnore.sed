@@ -1,1 +1,2 @@
-/.*types\.js.*/d
+/objectBuild\.js.*$/d
+/types\.js.*$/d

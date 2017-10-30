@@ -1,6 +1,6 @@
 // @flow
 
-import zipObject from "lodash/fp/zipObject";
+import objectBuild from "./objectBuild";
 
 type PromisesByName = {
   [name: string]: Promise<*>
@@ -28,9 +28,7 @@ const allByName = (promisesByName: PromisesByName): Promise<ResultsByName> => {
 
   const promiseNames = Object.keys(promisesByName);
 
-  return Promise.all(promises).then(results =>
-    zipObject(promiseNames, results)
-  );
+  return Promise.all(promises).then(objectBuild(promiseNames));
 };
 
 export default allByName;
