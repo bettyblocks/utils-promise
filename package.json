@@ -16,15 +16,10 @@
     "lint:fix": "yarn run lint -- --fix",
     "npm:publish": "np",
     "precommit": "lint-staged",
-    "commit": "git-cz",
+    "commit": "commit",
     "commitmsg": "commitlint -e",
     "version": "yarn run build:index && yarn run build:readme && git add README.md src/index.js",
     "prepublishOnly": "yarn run build:clean && yarn run build:src && yarn run build:flow"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
   },
   "lint-staged": {
     "*.js": [
@@ -51,6 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "4.2.2",
     "@commitlint/config-angular": "4.2.1",
+    "@commitlint/prompt-cli": "4.2.2",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.1",
@@ -58,9 +54,7 @@
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
     "babel-preset-stage-0": "6.24.1",
-    "commitizen": "2.9.6",
     "create-index": "2.2.0",
-    "cz-conventional-changelog": "2.1.0",
     "documentation": "5.3.3",
     "eslint": "4.10.0",
     "eslint-config-airbnb-base": "12.1.0",
