@@ -1,6 +1,39 @@
 # @jumpn/utils-promise
 
 > Promise utilities
+>
+> **NOTE**: All the functions described in [API](#API) are curried
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc -->
+
+- [Installation](#installation)
+  - [Using npm](#using-npm)
+  - [Using yarn](#using-yarn)
+- [Types](#types)
+- [API](#api)
+  - [allByName](#allbyname)
+  - [booleanize](#booleanize)
+  - [chain](#chain)
+  - [createDeferred](#createdeferred)
+  - [promisifyFunction](#promisifyfunction)
+  - [promisifyObject](#promisifyobject)
+  - [track](#track)
+  - [promiseTry](#promisetry)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Installation
+
+### Using [npm](https://docs.npmjs.com/cli/npm)
+
+    $ npm install --save @jumpn/utils-promise
+
+### Using [yarn](https://yarnpkg.com)
+
+    $ yarn add @jumpn/utils-promise
 
 ## Types
 
@@ -49,12 +82,7 @@ Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 Chains all promises starting from initialPromise and binding chainers to
 next methods
 
-**Parameters**
-
--   `chainers` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)>** 
--   `initialPromise` **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
-
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
+Type: CurriedFn2&lt;[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)>, [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>, [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>>
 
 ### createDeferred
 
