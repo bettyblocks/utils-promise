@@ -10,10 +10,10 @@ const getBuilder = values => (object, key, index) => ({
 });
 
 // TODO: move to @jumpn/utils-object once we create this one
-const objectBuild = (keys, values) => keys.reduce(getBuilder(values), {});
-
-export default (curry(objectBuild): CurriedFn2<
+const objectBuild: CurriedFn2<
   Array<string>,
   Array<any>,
   Object
->);
+> = curry((keys, values) => keys.reduce(getBuilder(values), {}));
+
+export default objectBuild;
