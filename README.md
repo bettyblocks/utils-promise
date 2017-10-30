@@ -33,6 +33,17 @@ property "from" with the name of the promise that caused the rejection.
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ResultsByName>** 
 
+### booleanize
+
+Returns a new promise which follows the one given returning true in case
+there was no error, or false otherwise
+
+**Parameters**
+
+-   `promise` **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** 
+
 ### chain
 
 Chains all promises starting from initialPromise and binding chainers to
