@@ -26,6 +26,7 @@ rules:
   no-underscore-dangle: off
   no-unused-expressions: [error, {allowShortCircuit: true}]
   no-useless-concat: off
+  import/extensions: off
   prefer-template: warn
   flowtype-errors/enforce-min-coverage: [warn, 80]
   flowtype-errors/show-errors: off
